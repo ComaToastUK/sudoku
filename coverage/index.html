@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-24T18:44:48+00:00">2017-11-24T18:44:48+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-25T09:51:23+00:00">2017-11-25T09:51:23+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         14.72
+         18.75
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>28</b> relevant lines. 
-    <span class="green"><b>28</b> lines covered</span> and
+    <b>33</b> relevant lines. 
+    <span class="green"><b>33</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -57,7 +57,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>52.9</td>
+        <td>79.0</td>
       </tr>
       
       <tr>
@@ -67,17 +67,17 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#b20bb48bc86858ffacb6eecf5b36fdd5800e8322" class="src_link" title="spec/board_spec.rb">spec/board_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>18</td>
-        <td>11</td>
-        <td>11</td>
+        <td>25</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>3.2</td>
       </tr>
       
       <tr>
@@ -154,8 +154,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @grid = create_board(9, Cell.new)</code>
         </li>
@@ -178,14 +178,14 @@
           <code class="ruby">  def create_board(n, val)</code>
         </li>
       
-        <li class="covered" data-hits="182" data-linenumber="9">
-          <span class="hits">182</span>
+        <li class="covered" data-hits="273" data-linenumber="9">
+          <span class="hits">273</span>
           
           <code class="ruby">    grid = Array.new(n) { Array.new(n) { val } }</code>
         </li>
       
-        <li class="covered" data-hits="182" data-linenumber="10">
-          <span class="hits">182</span>
+        <li class="covered" data-hits="273" data-linenumber="10">
+          <span class="hits">273</span>
           
           <code class="ruby">    grid.each { |cell| puts cell.each { |p| p }.join(&#39; &#39;) }</code>
         </li>
@@ -245,8 +245,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
           <code class="ruby">    @data = &#39;&#39;</code>
         </li>
@@ -273,8 +273,8 @@
     <h3>spec/board_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -300,8 +300,8 @@
           <code class="ruby">RSpec.describe Board do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
           <code class="ruby">  subject(:board) { described_class.new }</code>
         </li>
@@ -339,7 +339,7 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;initializes with 9 arrays of 9 cells&#39; do</code>
+          <code class="ruby">    it &#39;initializes with 9 arrays of length 9&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
@@ -351,25 +351,25 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">      9.times do</code>
+          <code class="ruby">      board.grid.length.times do</code>
         </li>
       
         <li class="covered" data-hits="9" data-linenumber="13">
           <span class="hits">9</span>
           
-          <code class="ruby">      expect(board.grid[i].length).to eq 9</code>
+          <code class="ruby">        expect(board.grid[i].length).to eq 9</code>
         </li>
       
         <li class="covered" data-hits="9" data-linenumber="14">
           <span class="hits">9</span>
           
-          <code class="ruby">      i+= 1</code>
+          <code class="ruby">        i+= 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -378,13 +378,55 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;initilizes with 9 arrays of 9 cells&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      i = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        board.grid[i].each do |cell|</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="20">
+          <span class="hits">9</span>
+          
+          <code class="ruby">          expect(cell.class).to eq Cell</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="21">
+          <span class="hits">9</span>
+          
+          <code class="ruby">          i &lt; 9 ? i+=1 : return</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
