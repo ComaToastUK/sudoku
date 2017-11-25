@@ -1,8 +1,7 @@
 require './lib/cell.rb'
 
 RSpec.describe Cell do
-
-subject(:cell) { described_class.new }
+  subject(:cell) { described_class.new }
 
   describe '#data' do
     it 'initializes with an empty cell' do

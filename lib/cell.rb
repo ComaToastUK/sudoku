@@ -1,5 +1,5 @@
 class Cell
-attr_accessor :data
+  attr_accessor :data
 
   def initialize
     @data = ''
